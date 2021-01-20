@@ -4,6 +4,8 @@
     <Name>BasicProject</Name>
     <RootNamespace>BasicProject</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
+    <SuppressPackageInstallationPrompt>True</SuppressPackageInstallationPrompt>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -47,10 +49,12 @@
     <Compile Include="BasicProject\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".do\app.yaml" />
     <Content Include="HelloApp\templates\HelloApp\index.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include=".do\" />
     <Folder Include="BasicProject\" />
     <Folder Include="HelloApp\" />
     <Folder Include="HelloApp\migrations\" />
